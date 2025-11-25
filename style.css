@@ -3,76 +3,48 @@
     Theme: Indigo & Neon Pink
 */
 
-/* This file holds all your custom CSS classes.
-    It works alongside the Tailwind CSS CDN link in your HTML.
-*/
-
 body {
     font-family: 'Inter', sans-serif;
-    /* Base dark background */
     background-color: #0d0d0d; 
-    /* Fixes scroll-padding for sticky header */
     scroll-padding-top: 80px; 
 }
 
-/* Make scrolling smooth when clicking nav links */
 html {
     scroll-behavior: smooth;
 }
 
-/* --- Accent Colors --- */
-/* These are your custom-defined colors */
-
-.text-accent {
-    color: #f0257c; /* Neon Pink */
-}
-.bg-accent {
-    background-color: #f0257c; /* Neon Pink */
-}
-.border-accent {
-    border-color: #f0257c; /* Neon Pink */
-}
-.ring-accent {
-    /* For focus rings on forms */
-    --tw-ring-color: #f0257c; 
-}
-.hover\:bg-pink-300:hover {
-    background-color: #f472b6; /* Lighter pink for hover */
-}
-.bg-accent\/20 {
-    background-color: rgba(240, 37, 124, 0.2); /* Neon Pink 20% opacity */
-}
-
+/* --- Colors --- */
+.text-accent { color: #f0257c; }
+.bg-accent { background-color: #f0257c; }
+.border-accent { border-color: #f0257c; }
+.ring-accent { --tw-ring-color: #f0257c; }
+.hover\:bg-pink-300:hover { background-color: #f472b6; }
+.bg-accent\/20 { background-color: rgba(240, 37, 124, 0.2); }
 
 /* --- Cards --- */
-/* These are the base styles for your service and gallery cards */
 .card {
     transition: all 0.3s ease;
     transform: scale(1);
-    /* Deep indigo border */
     border: 1px solid #312e81; 
 }
-
 .card:hover {
-    box-shadow: 0 10px 30px rgba(240, 37, 124, 0.2); /* Neon Pink shadow */
-    border-color: #f0257c; /* Neon Pink border on hover */
+    box-shadow: 0 10px 30px rgba(240, 37, 124, 0.2);
+    border-color: #f0257c;
     transform: scale(1.02);
 }
 .card-gallery {
     transition: all 0.3s ease;
     transform: scale(1);
-    border: 1px solid #312e81; /* Indigo-800 border */
+    border: 1px solid #312e81;
 }
 .card-gallery:hover {
     box-shadow: 0 10px 30px rgba(240, 37, 124, 0.2);
     transform: scale(1.03);
 }
 
-/* --- Image Backgrounds --- */
-/* These classes define the hero image paths and positioning */
-
+/* --- Images --- */
 .hero-bg {
-    background-image: url('images/hero-background.jpg'); /* Homepage Hero */
+    background-image: url('images/hero-background.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -91,77 +63,60 @@ html {
     background-size: cover;
     background-position: center;
 }
-
 .gear-hero-bg {
-    background-image: url('images/gear-hero-background.jpg'); /* Gear Page Hero */
+    background-image: url('images/gear-hero-background.jpg'); 
     background-size: cover;
     background-position: center;
 }
 .contact-hero-bg {
-    background-image: url('images/contact-hero-background.jpg'); /* Contact Page Hero */
+    background-image: url('images/contact-hero-background.jpg'); 
     background-size: cover;
     background-position: center;
 }
 .gallery-hero-bg {
-    background-image: url('images/gallery-hero-background.jpg'); /* Gallery Page Hero */
+    background-image: url('images/gallery-hero-background.jpg'); 
     background-size: cover;
     background-position: center;
 }
-
 /* UPDATED: About Page Hero Background */
-/* Now using the Carlos photo, specifically positioned to keep him visible */
 .about-hero-bg {
     background-image: url('images/carlos-studio-photo.jpg'); 
     background-size: cover;
-    /* Default position favors the left of the image (where Carlos is standing) */
     background-position: 25% center; 
 }
-
-/* FIX FOR MOBILE: Pushes the image over more on narrow screens to prevent cropping the face */
 @media (max-width: 768px) { 
     .about-hero-bg {
         background-position: 35% center; 
     }
 }
 
-
-/* --- Gear List Accordion Styles --- */
-
+/* --- Gear List --- */
 .gear-item {
-    background-color: #1e1b4b; /* bg-indigo-900 */
-    border-radius: 0.75rem; /* rounded-xl */
-    border: 1px solid #312e81; /* border-indigo-800 */
-    overflow: hidden; 
+    background-color: #1e1b4b;
+    border-radius: 0.75rem;
+    border: 1px solid #312e81;
+    overflow: hidden;
     transition: all 0.3s ease;
 }
-
 .gear-toggle {
-    padding: 1.25rem; /* p-5 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
     cursor: pointer;
     background-color: #1e1b4b;
     transition: background-color 0.2s ease;
 }
-
-.gear-toggle:hover {
-    background-color: #312e81; /* bg-indigo-800 */
-}
-
+.gear-toggle:hover { background-color: #312e81; }
 .gear-content {
     padding: 0 1.25rem 1.25rem 1.25rem;
     color: #c7d2fe;
     background-color: #1e1b4b;
     border-top: 1px solid #312e81;
 }
-
 .gear-content ul {
     list-style-type: disc;
     padding-left: 1.5rem;
 }
-
-.toggle-icon {
-    transition: transform 0.3s ease;
-}
-
-.toggle-icon.rotate-180 {
-    transform: rotate(180deg);
-}
+.toggle-icon { transition: transform 0.3s ease; }
+.toggle-icon.rotate-180 { transform: rotate(180deg); }
