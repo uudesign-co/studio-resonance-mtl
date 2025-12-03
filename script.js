@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --- Contact Form Pre-selection ---
+// --- Contact Form Logic ---
 function selectService(serviceName) {
     const dropdown = document.getElementById('service_type');
     if (dropdown) {
@@ -43,11 +43,9 @@ function selectService(serviceName) {
     }
 }
 
-// --- Contact Form Logic (URL Parameters) ---
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const serviceParam = urlParams.get('service');
-    
     if (serviceParam) {
         const dropdown = document.getElementById('service_type');
         if (dropdown) {
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- Hero Carousel Logic ---
+// --- FIXED HERO CAROUSEL LOGIC ---
 let currentSlide = 1;
 const totalSlides = 3; 
 let slideInterval;
@@ -68,13 +66,15 @@ function showSlide(slideIndex) {
         
         if (slide && dot) {
             if (i === slideIndex) {
-                slide.classList.remove('opacity-0');
-                slide.classList.add('opacity-100');
+                // Show this slide
+                slide.classList.add('active-slide');
+                // Highlight dot
                 dot.classList.remove('opacity-50');
                 dot.classList.add('opacity-100');
             } else {
-                slide.classList.remove('opacity-100');
-                slide.classList.add('opacity-0');
+                // Hide this slide
+                slide.classList.remove('active-slide');
+                // Dim dot
                 dot.classList.remove('opacity-100');
                 dot.classList.add('opacity-50');
             }
@@ -95,8 +95,11 @@ function goToSlide(n) {
     slideInterval = setInterval(nextSlide, 5000); 
 }
 
+// Start Carousel
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize first slide
     if (document.getElementById('slide-1')) {
+        showSlide(1); 
         slideInterval = setInterval(nextSlide, 5000);
     }
 });

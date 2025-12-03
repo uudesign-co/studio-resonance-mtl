@@ -11,22 +11,25 @@ body {
     background-color: #000000; 
     
     /* 2. RETRO GRID PATTERN */
+    /* This grid will show through any transparent section */
     background-image: 
         linear-gradient(rgba(240, 37, 124, 0.15) 1px, transparent 1px),
         linear-gradient(90deg, rgba(240, 37, 124, 0.15) 1px, transparent 1px);
     background-size: 40px 40px;
     
     scroll-padding-top: 80px; 
+    color: #e5e5e5; /* Default text color is light gray */
 }
 
-/* Headings use 'Outfit' - Clean, geometric, and thin */
+/* Headings use 'Outfit' */
 h1, h2, h3, h4, h5, h6, nav, .font-display {
     font-family: 'Outfit', sans-serif;
-    font-weight: 300; /* Light weight for "thin line" aesthetic */
+    font-weight: 300; 
     letter-spacing: 0.02em; 
+    color: #ffffff; /* Headings are pure white */
 }
 
-/* Make Hero Titles slightly bolder so they don't disappear */
+/* Make Hero Titles slightly bolder */
 #hero h1, #about-hero h1, #gear-hero h1, #contact-hero h1, #gallery-hero h1 {
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -46,7 +49,6 @@ html {
     box-shadow: 0 0 15px rgba(240, 37, 124, 0.4);
 }
 .border-accent { border-color: #f0257c; }
-.ring-accent { --tw-ring-color: #f0257c; }
 
 .hover\:bg-pink-300:hover { 
     background-color: #f472b6; 
@@ -55,11 +57,11 @@ html {
 .bg-accent\/20 { background-color: rgba(240, 37, 124, 0.15); }
 
 
-/* --- Cards (Black background to hide grid behind text) --- */
+/* --- Cards --- */
 .card {
     transition: all 0.3s ease;
     transform: scale(1);
-    border: 1px solid #333; 
+    border: 1px solid #333; /* Dark Gray Border (No Indigo) */
     background-color: #050505; /* Nearly black */
 }
 .card:hover {
@@ -79,24 +81,29 @@ html {
     transform: scale(1.03);
 }
 
-
-/* --- Hero Carousel Images --- */
-/* Removed transition properties for hard cut */
+/* --- Hero Carousel --- */
 .hero-slide {
     background-size: cover;
     background-position: center;
+    /* Ensure slides are stacked correctly */
+    position: absolute;
+    inset: 0;
+    /* Default state is hidden */
+    opacity: 0;
+    /* Instant switch (no transition) as requested previously */
+    transition: none; 
     will-change: opacity;
 }
 
-.hero-slide-1 {
-    background-image: url('images/hero-record.jpg');
+/* Active class to show slide */
+.hero-slide.active-slide {
+    opacity: 1;
+    z-index: 10;
 }
-.hero-slide-2 {
-    background-image: url('images/hero-refine.jpg');
-}
-.hero-slide-3 {
-    background-image: url('images/hero-release.jpg');
-}
+
+.hero-slide-1 { background-image: url('images/hero-record.jpg'); }
+.hero-slide-2 { background-image: url('images/hero-refine.jpg'); }
+.hero-slide-3 { background-image: url('images/hero-release.jpg'); }
 
 
 /* --- Page Hero Backgrounds --- */
@@ -116,7 +123,6 @@ html {
     background-position: center;
 }
 
-/* About Page Hero Background */
 .about-hero-bg {
     background-image: url('images/carlos-studio-photo.jpg'); 
     background-size: cover;
@@ -128,31 +134,17 @@ html {
     }
 }
 
-
 /* --- General Image Placeholders --- */
-.img-placeholder-1 {
-    background-image: url('images/production-suite.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.img-placeholder-2 {
-    background-image: url('images/live-suite.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.img-placeholder-3 {
-    background-image: url('images/vocal-suite.jpg');
-    background-size: cover;
-    background-position: center;
-}
+.img-placeholder-1 { background-image: url('images/production-suite.jpg'); background-size: cover; background-position: center; }
+.img-placeholder-2 { background-image: url('images/live-suite.jpg'); background-size: cover; background-position: center; }
+.img-placeholder-3 { background-image: url('images/vocal-suite.jpg'); background-size: cover; background-position: center; }
 
 
 /* --- Gear List Styles --- */
 .gear-item {
-    background-color: #050505; /* Black background */
+    background-color: #050505; 
     border-radius: 0.75rem;
-    border: 1px solid #333; /* Dark gray border */
-    /* Neon Left Accent Border */
+    border: 1px solid #333; /* Dark Gray Border */
     border-left: 4px solid #f0257c; 
     overflow: hidden;
     transition: all 0.3s ease;
@@ -174,20 +166,13 @@ html {
 
 .gear-content {
     padding: 0 1.25rem 1.25rem 1.25rem;
-    color: #d4d4d4; /* Light gray text */
+    color: #d4d4d4;
     background-color: #050505;
     border-top: 1px solid #333;
 }
-
 .gear-content ul {
     list-style-type: disc;
     padding-left: 1.5rem;
 }
-
-/* Chevron Animation */
-.toggle-icon { 
-    transition: transform 0.3s ease; 
-}
-.toggle-icon.rotate-180 { 
-    transform: rotate(180deg); 
-}
+.toggle-icon { transition: transform 0.3s ease; }
+.toggle-icon.rotate-180 { transform: rotate(180deg); }

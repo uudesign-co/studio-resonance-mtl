@@ -3,7 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resonance | Record. Refine. Release.</title>
+    
+    <!-- PRIMARY SEO -->
+    <title>Resonance MTL | Record. Refine. Release.</title>
+    <meta name="description" content="Professional recording studio in Montreal offering audio production, mixing, mastering, and vintage gear repair. Led by Carlos Avila. Record. Refine. Release.">
+    <meta name="keywords" content="Recording Studio Montreal, Audio Repair Montreal, Mixing and Mastering, Music Production Lessons, Vintage Synth Repair, Carlos Avila, Resonance MTL">
+    <meta name="author" content="Carlos Avila">
+    <meta name="robots" content="index, follow">
+
+    <!-- SOCIAL MEDIA TAGS (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://resonancemtl.ca/">
+    <meta property="og:title" content="Resonance MTL | Record. Refine. Release.">
+    <meta property="og:description" content="Professional recording studio, audio education, and vintage gear repair based in Montreal. Create your sound with Carlos Avila.">
+    <meta property="og:image" content="https://resonancemtl.ca/images/hero-record.jpg">
+
+    <!-- TWITTER CARD -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://resonancemtl.ca/">
+    <meta property="twitter:title" content="Resonance MTL | Record. Refine. Release.">
+    <meta property="twitter:description" content="Professional recording studio, audio education, and vintage gear repair based in Montreal.">
+    <meta property="twitter:image" content="https://resonancemtl.ca/images/hero-record.jpg">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <!-- CSS & SCRIPTS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -60,14 +85,12 @@
     <main>
         <!-- Cinematic Hero Carousel -->
         <section id="hero" class="relative h-screen w-full overflow-hidden bg-black z-0">
-            <!-- REMOVED GLOBAL OVERLAY HERE - It was covering the text -->
-
+            
             <!-- SLIDE 1: RECORD -->
             <div class="hero-slide absolute inset-0 hero-slide-1 flex items-center justify-center transition-opacity duration-[2000ms] ease-in-out opacity-100" id="slide-1">
-                <!-- NEW: Local Overlay (Behind Text) -->
-                <div class="absolute inset-0 bg-black/70 z-10"></div>
+                <!-- Local Overlay (Behind Text) -->
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
                 
-                <!-- Text Content (On Top: z-20) -->
                 <div class="relative z-20 text-center px-4 pt-32">
                     <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg">
                         <span class="block text-accent">RECORD</span>
@@ -80,10 +103,9 @@
 
             <!-- SLIDE 2: REFINE -->
             <div class="hero-slide absolute inset-0 hero-slide-2 flex items-center justify-center transition-opacity duration-[2000ms] ease-in-out opacity-0" id="slide-2">
-                <!-- NEW: Local Overlay (Behind Text) -->
-                <div class="absolute inset-0 bg-black/70 z-10"></div>
+                <!-- Local Overlay (Behind Text) -->
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
 
-                <!-- Text Content (On Top: z-20) -->
                 <div class="relative z-20 text-center px-4 pt-32">
                     <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg">
                         <span class="block text-accent">REFINE</span>
@@ -96,10 +118,9 @@
 
             <!-- SLIDE 3: RELEASE -->
             <div class="hero-slide absolute inset-0 hero-slide-3 flex items-center justify-center transition-opacity duration-[2000ms] ease-in-out opacity-0" id="slide-3">
-                <!-- NEW: Local Overlay (Behind Text) -->
-                <div class="absolute inset-0 bg-black/70 z-10"></div>
+                <!-- Local Overlay (Behind Text) -->
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
 
-                <!-- Text Content (On Top: z-20) -->
                 <div class="relative z-20 text-center px-4 pt-32">
                     <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg">
                         <span class="block text-accent">RELEASE</span>
@@ -110,11 +131,13 @@
                 </div>
             </div>
 
-            <!-- STATIC CTA BUTTON -->
+            <!-- CTA Button -->
             <div class="absolute bottom-20 left-0 right-0 z-30 text-center">
                 <a href="contact.html?service=General+Inquiry" class="inline-block bg-accent text-gray-900 px-10 py-4 rounded-xl text-lg font-bold hover:bg-pink-300 transition duration-300 shadow-lg transform hover:scale-105">
                     START YOUR PROJECT
                 </a>
+                
+                <!-- Dots -->
                 <div class="flex justify-center space-x-3 mt-8">
                     <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-white opacity-100 slide-dot transition-opacity" id="dot-1" aria-label="Slide 1"></button>
                     <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-white opacity-50 slide-dot transition-opacity" id="dot-2" aria-label="Slide 2"></button>

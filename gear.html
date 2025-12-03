@@ -11,9 +11,13 @@
 </head>
 <body class="text-gray-50 antialiased">
 
+<!-- OPEN WRAPPER -->
 <div class="relative">
+
     <header class="absolute top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <!-- Logo + Text Stack -->
             <a href="index.html" class="flex items-center group">
                 <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20 mr-3"> 
                 <div class="flex flex-col font-display uppercase leading-none">
@@ -66,10 +70,11 @@
             </div>
         </section>
 
-        <!-- Main Section: Removed bg-gray-900 to show grid -->
+        <!-- Main Section: Removed background color to show grid -->
         <section id="gear" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-16 text-white">The Full Gear List</h2>
+                <!-- 4-Column Grid Layout -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
                     
                     <!-- 1. Guitars -->
@@ -172,27 +177,7 @@
                         </div>
                     </div>
 
-                    <!-- 11. Dynamic Processors -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="sliders-horizontal" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Dynamic Processors</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>KLARKTEKNIK 76-KT Limiter x2</li><li>KLARKTEKNIK EQP-KT x2</li><li>KLARKTEKNIK 2A-KT x 2</li><li>UREI 1176 rev G</li><li>ALESIS 3630 Compressor</li><li>WARM Bus Compressor</li><li>DBX 162 Stereo Compressor</li><li>Dolby 361 Vocal Enhancer x 2</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 12. Headphones -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="headphones" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Headphones</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>Furman HDS-6 Headphone Distribution system + HR6 remote headphone stations x 6</li><li>Audio Technica ATH M-50 Closed Back Headphones x 8</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 13. Rack FX -->
+                    <!-- 11. Rack FX -->
                     <div class="gear-item">
                         <div class="gear-toggle">
                             <div class="flex items-center space-x-3"><i data-lucide="server" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Rack FX</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
@@ -202,13 +187,33 @@
                         </div>
                     </div>
 
-                    <!-- 14. Control Surface -->
+                    <!-- 12. Dynamic Processors -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="sliders-horizontal" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Dynamic Processors</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>KLARKTEKNIK 76-KT Limiter x2</li><li>KLARKTEKNIK EQP-KT x2</li><li>KLARKTEKNIK 2A-KT x 2</li><li>UREI 1176 rev G</li><li>ALESIS 3630 Compressor</li><li>WARM Bus Compressor</li><li>DBX 162 Stereo Compressor</li><li>Dolby 361 Vocal Enhancer x 2</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 13. Control Surface -->
                     <div class="gear-item">
                         <div class="gear-toggle">
                             <div class="flex items-center space-x-3"><i data-lucide="layout-grid" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Control Surface</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>Mackie MC UNIVERSAL PRO Control Surface</li><li>MOTU Midi Timepiece - midi patchbay</li><li>Ableton Push 2</li><li>RME ARC Controller</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 14. Headphones -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="headphones" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Headphones</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>Furman HDS-6 Headphone Distribution system + HR6 remote headphone stations x 6</li><li>Audio Technica ATH M-50 Closed Back Headphones x 8</li></ul>
                         </div>
                     </div>
 
@@ -231,6 +236,7 @@
                             <ul class="space-y-1"><li>Pro Tools Studio</li><li>Ableton Live 11 Suite</li><li>Logic Pro X</li><li>FL Studio</li><li>Reaper</li></ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -238,7 +244,7 @@
 
     <footer class="bg-black border-t border-[#333]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-gray-400 text-sm">
-            <p>&copy; 2025 Résonance. All Rights Reserved. | <span class="text-accent">Record, Refine, Release.</span></p>
+            <p>&copy; 2025 Resonance. All Rights Reserved. | <span class="text-accent">Record, Refine, Release.</span></p>
             <div class="mt-4 flex justify-center space-x-6">
                 <a href="https://www.instagram.com/studio_resonance_mtl/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                 <a href="https://www.facebook.com/resonancemtl" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="facebook" class="w-5 h-5"></i></a>
@@ -246,7 +252,8 @@
             </div>
         </div>
     </footer>
-</div>
+
+</div> 
 
 <script src="script.js"></script>
 </body>
