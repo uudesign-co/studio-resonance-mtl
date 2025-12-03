@@ -35,20 +35,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// --- Contact Form Pre-selection ---
+function selectService(serviceName) {
+    const dropdown = document.getElementById('service_type');
+    if (dropdown) {
+        dropdown.value = serviceName;
+    }
+}
+
 // --- Contact Form Logic (URL Parameters) ---
-// This runs immediately when the contact page loads
 document.addEventListener('DOMContentLoaded', () => {
-    // Get the URL parameters (e.g., ?service=Studio+Recording)
     const urlParams = new URLSearchParams(window.location.search);
     const serviceParam = urlParams.get('service');
     
-    // If a service parameter exists...
     if (serviceParam) {
-        // Find the dropdown menu
         const dropdown = document.getElementById('service_type');
         if (dropdown) {
-            // Set the dropdown value to match the parameter
             dropdown.value = serviceParam;
         }
+    }
+});
+
+// --- Hero Carousel Logic ---
+let currentSlide = 1;
+const totalSlides = 3; 
+let slideInterval;
+
+function showSlide(slideIndex) {
+    for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        const dot = document.getElementById(`dot-${i}`);
+        
+        if (slide && dot) {
+            if (i === slideIndex) {
+                slide.classList.remove('opacity-0');
+                slide.classList.add('opacity-100');
+                dot.classList.remove('opacity-50');
+                dot.classList.add('opacity-100');
+            } else {
+                slide.classList.remove('opacity-100');
+                slide.classList.add('opacity-0');
+                dot.classList.remove('opacity-100');
+                dot.classList.add('opacity-50');
+            }
+        }
+    }
+    currentSlide = slideIndex;
+}
+
+function nextSlide() {
+    let next = currentSlide + 1;
+    if (next > totalSlides) next = 1;
+    showSlide(next);
+}
+
+function goToSlide(n) {
+    showSlide(n);
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000); 
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('slide-1')) {
+        slideInterval = setInterval(nextSlide, 5000);
     }
 });

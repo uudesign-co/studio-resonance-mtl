@@ -4,51 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resonance | Record. Refine. Release.</title>
-    
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    
-    <!-- Your Custom Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-gray-50 antialiased">
 
 <div class="relative">
-    <header class="absolute top-0 left-0 right-0 z-50">
+    <!-- Header -->
+    <header class="absolute top-0 left-0 right-0 z-[100]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center text-2xl font-extrabold tracking-widest uppercase">
-                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20"> 
+            
+            <!-- Logo + Text Stack -->
+            <a href="index.html" class="flex items-center group">
+                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20 mr-3"> 
+                <div class="flex flex-col font-display uppercase leading-none">
+                    <span class="text-xs text-gray-300 tracking-[0.2em] self-start">Studio</span>
+                    <span class="text-2xl font-extrabold text-white tracking-widest my-1">Résonance</span>
+                    <span class="text-xs text-accent tracking-[0.2em] self-end">MTL</span>
+                </div>
             </a>
 
-            <nav class="hidden md:flex space-x-6 font-medium items-center">
+            <nav class="hidden md:flex space-x-6 font-medium items-center text-white">
                 <a href="#services" class="hover:text-accent transition duration-200">Services</a>
                 <a href="gallery.html" class="hover:text-accent transition duration-200">Gallery</a>
                 <a href="gear.html" class="hover:text-accent transition duration-200">Gear</a>
                 <a href="about.html" class="hover:text-accent transition duration-200">About</a>
                 <a href="contact.html" class="hover:text-accent transition duration-200">Contact</a>
+                
                 <a href="contact.html?service=General+Inquiry" class="bg-accent text-gray-900 px-4 py-1 rounded-full font-semibold hover:bg-pink-300 transition duration-300 shadow-md">
                     Book Now
                 </a>
             </nav>
             
-            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200 text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
         
         <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-gray-900">
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Services</a>
-                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Gallery</a>
-                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Gear</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">About</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Contact</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-black border-b border-[#333]">
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Gallery</a>
+                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Gear</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Contact</a>
                 <a href="contact.html?service=General+Inquiry" class="w-full inline-block bg-accent text-gray-900 px-4 py-2 my-2 rounded-lg font-semibold hover:bg-pink-300 transition duration-300">
                     Book Now
                 </a>
@@ -57,31 +58,81 @@
     </header>
 
     <main>
-        <section id="hero" class="relative overflow-hidden bg-indigo-950 hero-bg">
-            <div class="absolute inset-0 bg-gray-900/60 z-0"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-48 pb-20 md:pt-56 md:pb-32">
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4">
-                    <span class="block text-white">Resonance</span>
-                    <span class="block text-accent mt-2">Record. Refine. Release.</span>
-                </h1>
-                <p class="text-xl text-indigo-200 max-w-3xl mx-auto mb-10">
-                    Professional recording studio, audio education, acoustic consulting, and vintage gear repair based in MTL.
-                </p>
+        <!-- Cinematic Hero Carousel -->
+        <section id="hero" class="relative h-screen w-full overflow-hidden bg-black z-0">
+            <!-- REMOVED GLOBAL OVERLAY HERE - It was covering the text -->
+
+            <!-- SLIDE 1: RECORD -->
+            <div class="hero-slide absolute inset-0 hero-slide-1 flex items-center justify-center transition-opacity duration-[2000ms] ease-in-out opacity-100" id="slide-1">
+                <!-- NEW: Local Overlay (Behind Text) -->
+                <div class="absolute inset-0 bg-black/70 z-10"></div>
+                
+                <!-- Text Content (On Top: z-20) -->
+                <div class="relative z-20 text-center px-4 pt-32">
+                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg">
+                        <span class="block text-accent">RECORD</span>
+                    </h1>
+                    <p class="text-xl text-white font-medium max-w-3xl mx-auto mb-10 drop-shadow-md">
+                        Capture your performance with world-class microphones in our acoustically perfect live rooms.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: REFINE -->
+            <div class="hero-slide absolute inset-0 hero-slide-2 flex items-center justify-center transition-opacity duration-[2000ms] ease-in-out opacity-0" id="slide-2">
+                <!-- NEW: Local Overlay (Behind Text) -->
+                <div class="absolute inset-0 bg-black/70 z-10"></div>
+
+                <!-- Text Content (On Top: z-20) -->
+                <div class="relative z-20 text-center px-4 pt-32">
+                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg">
+                        <span class="block text-accent">REFINE</span>
+                    </h1>
+                    <p class="text-xl text-white font-medium max-w-3xl mx-auto mb-10 drop-shadow-md">
+                        Edit, mix, and sculpt your sound with our vintage outboard gear and industry-standard plugins.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: RELEASE -->
+            <div class="hero-slide absolute inset-0 hero-slide-3 flex items-center justify-center transition-opacity duration-[2000ms] ease-in-out opacity-0" id="slide-3">
+                <!-- NEW: Local Overlay (Behind Text) -->
+                <div class="absolute inset-0 bg-black/70 z-10"></div>
+
+                <!-- Text Content (On Top: z-20) -->
+                <div class="relative z-20 text-center px-4 pt-32">
+                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg">
+                        <span class="block text-accent">RELEASE</span>
+                    </h1>
+                    <p class="text-xl text-white font-medium max-w-3xl mx-auto mb-10 drop-shadow-md">
+                        Finalize your masterpiece. Mastering-ready delivery for streaming, vinyl, and broadcast.
+                    </p>
+                </div>
+            </div>
+
+            <!-- STATIC CTA BUTTON -->
+            <div class="absolute bottom-20 left-0 right-0 z-30 text-center">
                 <a href="contact.html?service=General+Inquiry" class="inline-block bg-accent text-gray-900 px-10 py-4 rounded-xl text-lg font-bold hover:bg-pink-300 transition duration-300 shadow-lg transform hover:scale-105">
                     START YOUR PROJECT
                 </a>
+                <div class="flex justify-center space-x-3 mt-8">
+                    <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-white opacity-100 slide-dot transition-opacity" id="dot-1" aria-label="Slide 1"></button>
+                    <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-white opacity-50 slide-dot transition-opacity" id="dot-2" aria-label="Slide 2"></button>
+                    <button onclick="goToSlide(3)" class="w-3 h-3 rounded-full bg-white opacity-50 slide-dot transition-opacity" id="dot-3" aria-label="Slide 3"></button>
+                </div>
             </div>
         </section>
 
-        <section id="services" class="py-20 bg-gray-900">
+        <!-- Services Section -->
+        <section id="services" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-16 text-white">The Four Pillars of Resonance</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Studio Sessions Card -->
-                    <div class="card p-6 bg-indigo-900 rounded-xl flex flex-col items-start">
+                    <div class="card p-6 rounded-xl flex flex-col items-start">
                         <i data-lucide="mic-2" class="w-10 h-10 text-accent mb-4"></i>
                         <h3 class="text-2xl font-semibold mb-3 text-white">Studio Sessions</h3>
-                        <p class="text-indigo-200 mb-6 flex-grow">
+                        <p class="text-gray-300 mb-6 flex-grow">
                             Professional recording, mixing, and mastering services. Capture your music, podcasts, or voice-overs in a meticulously treated acoustic space engineered for sonic accuracy.
                         </p>
                         <a href="contact.html?service=Studio+Recording" class="w-full inline-block text-center bg-accent/20 text-accent py-2 rounded-lg font-medium hover:bg-accent hover:text-gray-900 transition duration-300">
@@ -89,10 +140,10 @@
                         </a>
                     </div>
                     <!-- Resonance Academy Card -->
-                    <div class="card p-6 bg-indigo-900 rounded-xl flex flex-col items-start">
+                    <div class="card p-6 rounded-xl flex flex-col items-start">
                         <i data-lucide="graduation-cap" class="w-10 h-10 text-accent mb-4"></i>
                         <h3 class="text-2xl font-semibold mb-3 text-white">Resonance Academy</h3>
-                        <p class="text-indigo-200 mb-6 flex-grow">
+                        <p class="text-gray-300 mb-6 flex-grow">
                             Private music and audio production lessons. Learn theory, specific instruments, mixing fundamentals, and DAW operation from a certified teacher.
                         </p>
                         <a href="contact.html?service=Audio+Lessons+%2F+Academy" class="w-full inline-block text-center bg-accent/20 text-accent py-2 rounded-lg font-medium hover:bg-accent hover:text-gray-900 transition duration-300">
@@ -100,10 +151,10 @@
                         </a>
                     </div>
                     <!-- Acoustic Design Card -->
-                    <div class="card p-6 bg-indigo-900 rounded-xl flex flex-col items-start">
+                    <div class="card p-6 rounded-xl flex flex-col items-start">
                         <i data-lucide="settings-2" class="w-10 h-10 text-accent mb-4"></i>
                         <h3 class="text-2xl font-semibold mb-3 text-white">Acoustic Design & Consultation</h3>
-                        <p class="text-indigo-200 mb-6 flex-grow">
+                        <p class="text-gray-300 mb-6 flex-grow">
                             Expert consulting for acoustic treatment, home studio build-outs, and gear purchasing advice to optimize your personal creative space.
                         </p>
                         <a href="contact.html?service=Acoustic+Design+%26+Consultation" class="w-full inline-block text-center bg-accent/20 text-accent py-2 rounded-lg font-medium hover:bg-accent hover:text-gray-900 transition duration-300">
@@ -111,10 +162,10 @@
                         </a>
                     </div>
                     <!-- Resonance Tech Card -->
-                    <div class="card p-6 bg-indigo-900 rounded-xl flex flex-col items-start">
+                    <div class="card p-6 rounded-xl flex flex-col items-start">
                         <i data-lucide="wrench" class="w-10 h-10 text-accent mb-4"></i>
                         <h3 class="text-2xl font-semibold mb-3 text-white">Resonance Tech</h3>
-                        <p class="text-indigo-200 mb-6 flex-grow">
+                        <p class="text-gray-300 mb-6 flex-grow">
                             Specialized repair & maintenance services for vintage musical instruments, control boards, amplifiers, and professional audio equipment. Custom Modifications also available upon request.
                         </p>
                         <a href="contact.html?service=Equipment+Repair+%2F+Tech" class="w-full inline-block text-center bg-accent/20 text-accent py-2 rounded-lg font-medium hover:bg-accent hover:text-gray-900 transition duration-300">
@@ -125,13 +176,11 @@
             </div>
         </section>
 
-        <!-- Gallery Section (TEASER) -->
-        <section id="gallery" class="py-20 bg-indigo-950">
+        <!-- Gallery Teaser Section -->
+        <section id="gallery" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-16 text-white">Explore Our Space</h2>
-                
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                    <!-- UPDATED: Increased height to h-[500px] -->
                     <div class="card-gallery h-[500px] rounded-xl overflow-hidden img-placeholder-1">
                         <div class="w-full h-full bg-black/30 flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Production Suite</h3>
@@ -148,21 +197,18 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- NEW: View Full Gallery Button -->
                 <div class="text-center">
                     <a href="gallery.html" class="inline-block border-2 border-accent text-accent hover:bg-accent hover:text-gray-900 px-8 py-3 rounded-full font-bold transition duration-300 uppercase tracking-wider">
                         View Full Gallery
                     </a>
                 </div>
-
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 border-t border-indigo-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-indigo-400 text-sm">
-            <p>&copy; 2025 Resonance. All Rights Reserved. | <span class="text-accent">Resonance MTL, Record, Refine, Release.</span></p>
+    <footer class="bg-black border-t border-[#333]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Resonance. All Rights Reserved. | <span class="text-accent">Record, Refine, Release.</span></p>
             <div class="mt-4 flex justify-center space-x-6">
                 <a href="https://www.instagram.com/studio_resonance_mtl/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                 <a href="https://www.facebook.com/resonancemtl" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="facebook" class="w-5 h-5"></i></a>

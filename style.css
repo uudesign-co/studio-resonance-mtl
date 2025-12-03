@@ -1,68 +1,105 @@
 /*
     Resonance Studio Stylesheet
-    Theme: Indigo & Neon Pink
+    Theme: Midnight Neon (80s Synthwave)
 */
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0d0d0d; 
+    font-weight: 400;
+    
+    /* 1. TRUE BLACK BACKGROUND */
+    background-color: #000000; 
+    
+    /* 2. RETRO GRID PATTERN */
+    background-image: 
+        linear-gradient(rgba(240, 37, 124, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240, 37, 124, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+    
     scroll-padding-top: 80px; 
+}
+
+/* Headings use 'Outfit' - Clean, geometric, and thin */
+h1, h2, h3, h4, h5, h6, nav, .font-display {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300; /* Light weight for "thin line" aesthetic */
+    letter-spacing: 0.02em; 
+}
+
+/* Make Hero Titles slightly bolder so they don't disappear */
+#hero h1, #about-hero h1, #gear-hero h1, #contact-hero h1, #gallery-hero h1 {
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* --- Colors --- */
-.text-accent { color: #f0257c; }
-.bg-accent { background-color: #f0257c; }
+/* --- Colors & Glows --- */
+.text-accent { 
+    color: #f0257c; 
+    text-shadow: 0 0 10px rgba(240, 37, 124, 0.5);
+}
+.bg-accent { 
+    background-color: #f0257c; 
+    box-shadow: 0 0 15px rgba(240, 37, 124, 0.4);
+}
 .border-accent { border-color: #f0257c; }
 .ring-accent { --tw-ring-color: #f0257c; }
-.hover\:bg-pink-300:hover { background-color: #f472b6; }
-.bg-accent\/20 { background-color: rgba(240, 37, 124, 0.2); }
 
-/* --- Cards --- */
+.hover\:bg-pink-300:hover { 
+    background-color: #f472b6; 
+    box-shadow: 0 0 25px rgba(240, 37, 124, 0.8);
+}
+.bg-accent\/20 { background-color: rgba(240, 37, 124, 0.15); }
+
+
+/* --- Cards (Black background to hide grid behind text) --- */
 .card {
     transition: all 0.3s ease;
     transform: scale(1);
-    border: 1px solid #312e81; 
+    border: 1px solid #333; 
+    background-color: #050505; /* Nearly black */
 }
 .card:hover {
-    box-shadow: 0 10px 30px rgba(240, 37, 124, 0.2);
+    box-shadow: 0 0 20px rgba(240, 37, 124, 0.3);
     border-color: #f0257c;
     transform: scale(1.02);
 }
 .card-gallery {
     transition: all 0.3s ease;
     transform: scale(1);
-    border: 1px solid #312e81;
+    border: 1px solid #333;
+    background-color: #000;
 }
 .card-gallery:hover {
-    box-shadow: 0 10px 30px rgba(240, 37, 124, 0.2);
+    box-shadow: 0 0 20px rgba(240, 37, 124, 0.3);
+    border-color: #f0257c;
     transform: scale(1.03);
 }
 
-/* --- Images --- */
-.hero-bg {
-    background-image: url('images/hero-background.jpg');
+
+/* --- Hero Carousel Images --- */
+/* Removed transition properties for hard cut */
+.hero-slide {
     background-size: cover;
     background-position: center;
+    will-change: opacity;
 }
-.img-placeholder-1 {
-    background-image: url('images/production-suite.jpg');
-    background-size: cover;
-    background-position: center;
+
+.hero-slide-1 {
+    background-image: url('images/hero-record.jpg');
 }
-.img-placeholder-2 {
-    background-image: url('images/live-suite.jpg');
-    background-size: cover;
-    background-position: center;
+.hero-slide-2 {
+    background-image: url('images/hero-refine.jpg');
 }
-.img-placeholder-3 {
-    background-image: url('images/vocal-suite.jpg');
-    background-size: cover;
-    background-position: center;
+.hero-slide-3 {
+    background-image: url('images/hero-release.jpg');
 }
+
+
+/* --- Page Hero Backgrounds --- */
 .gear-hero-bg {
     background-image: url('images/gear-hero-background.jpg'); 
     background-size: cover;
@@ -78,7 +115,8 @@ html {
     background-size: cover;
     background-position: center;
 }
-/* UPDATED: About Page Hero Background */
+
+/* About Page Hero Background */
 .about-hero-bg {
     background-image: url('images/carlos-studio-photo.jpg'); 
     background-size: cover;
@@ -90,33 +128,66 @@ html {
     }
 }
 
-/* --- Gear List --- */
+
+/* --- General Image Placeholders --- */
+.img-placeholder-1 {
+    background-image: url('images/production-suite.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.img-placeholder-2 {
+    background-image: url('images/live-suite.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.img-placeholder-3 {
+    background-image: url('images/vocal-suite.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* --- Gear List Styles --- */
 .gear-item {
-    background-color: #1e1b4b;
+    background-color: #050505; /* Black background */
     border-radius: 0.75rem;
-    border: 1px solid #312e81;
+    border: 1px solid #333; /* Dark gray border */
+    /* Neon Left Accent Border */
+    border-left: 4px solid #f0257c; 
     overflow: hidden;
     transition: all 0.3s ease;
 }
+.gear-item:hover {
+    box-shadow: 0 0 15px rgba(240, 37, 124, 0.2);
+}
+
 .gear-toggle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem;
     cursor: pointer;
-    background-color: #1e1b4b;
+    background-color: #050505;
     transition: background-color 0.2s ease;
 }
-.gear-toggle:hover { background-color: #312e81; }
+.gear-toggle:hover { background-color: #1a1a1a; }
+
 .gear-content {
     padding: 0 1.25rem 1.25rem 1.25rem;
-    color: #c7d2fe;
-    background-color: #1e1b4b;
-    border-top: 1px solid #312e81;
+    color: #d4d4d4; /* Light gray text */
+    background-color: #050505;
+    border-top: 1px solid #333;
 }
+
 .gear-content ul {
     list-style-type: disc;
     padding-left: 1.5rem;
 }
-.toggle-icon { transition: transform 0.3s ease; }
-.toggle-icon.rotate-180 { transform: rotate(180deg); }
+
+/* Chevron Animation */
+.toggle-icon { 
+    transition: transform 0.3s ease; 
+}
+.toggle-icon.rotate-180 { 
+    transform: rotate(180deg); 
+}

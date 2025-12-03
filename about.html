@@ -6,7 +6,7 @@
     <title>Resonance | About Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-gray-50 antialiased">
@@ -14,11 +14,16 @@
 <div class="relative">
     <header class="absolute top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center text-2xl font-extrabold tracking-widest uppercase">
-                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20"> 
+            <a href="index.html" class="flex items-center group">
+                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20 mr-3"> 
+                <div class="flex flex-col font-display uppercase leading-none">
+                    <span class="text-xs text-gray-300 tracking-[0.2em] self-start">Studio</span>
+                    <span class="text-2xl font-extrabold text-white tracking-widest my-1">Résonance</span>
+                    <span class="text-xs text-accent tracking-[0.2em] self-end">MTL</span>
+                </div>
             </a>
 
-            <nav class="hidden md:flex space-x-6 font-medium items-center">
+            <nav class="hidden md:flex space-x-6 font-medium items-center text-white">
                 <a href="index.html#services" class="hover:text-accent transition duration-200">Services</a>
                 <a href="gallery.html" class="hover:text-accent transition duration-200">Gallery</a>
                 <a href="gear.html" class="hover:text-accent transition duration-200">Gear</a>
@@ -29,18 +34,18 @@
                 </a>
             </nav>
             
-            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200 text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i data-lucide="menu" class="w-6 h-6 text-white"></i>
             </button>
         </div>
         
         <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-gray-900">
-                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Services</a>
-                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Gallery</a>
-                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Gear</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-accent bg-gray-800">About</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Contact</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-black">
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Gallery</a>
+                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Gear</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-accent bg-gray-900">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Contact</a>
                 <a href="contact.html?service=General+Inquiry" class="w-full inline-block bg-accent text-gray-900 px-4 py-2 my-2 rounded-lg font-semibold hover:bg-pink-300 transition duration-300">
                     Book Now
                 </a>
@@ -49,26 +54,25 @@
     </header>
 
     <main>
-        <!-- Hero with Carlos's Photo (Defined in CSS) -->
-        <section id="about-hero" class="relative overflow-hidden bg-indigo-950 about-hero-bg">
-            <div class="absolute inset-0 bg-gray-900/60 z-0"></div>
+        <section id="about-hero" class="relative overflow-hidden about-hero-bg">
+            <div class="absolute inset-0 bg-black/60 z-0"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-48 pb-20 md:pt-56 md:pb-32">
                 <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4">
                     <span class="block text-white">THE STUDIO</span>
                 </h1>
-                <p class="text-2xl text-accent max-w-3xl mx-auto">
+                <p class="text-2xl text-accent max-w-3xl mx-auto text-shadow-neon">
                     A sanctuary for sound, creativity, and technical excellence.
                 </p>
             </div>
         </section>
 
-        <!-- Bio Content -->
-        <section id="about-content" class="py-20 bg-gray-900">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <!-- Centered, simpler layout -->
-                
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 border-b-2 border-accent pb-4 inline-block">Carlos Avila: Sculptor of Sound</h2>
-                
-                <div class="text-left space-y-6 text-indigo-100 text-lg leading-relaxed">
+        <!-- Removed bg-gray-900 to show grid -->
+        <section id="about-content" class="py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 border-b-2 border-[#f0257c] pb-4 inline-block">
+                    Carlos Avila: Sculptor of Sound
+                </h2>
+                <div class="text-left space-y-6 text-gray-300 text-lg leading-relaxed">
                     <p>
                         For over two decades, Carlos Avila has been a dedicated creative partner to the independent music community. As the Owner and Head Engineer of Studio Resonance MTL, he approaches audio not just as a technical craft, but as an art form.
                     </p>
@@ -79,14 +83,13 @@
                         He specializes in unconventional recording and sonic experimentation, thriving on bringing complex artistic ideas to life. If the music is alive in your mind, Carlos will refine that inspiration and transform it into an undeniable, resonant reality.
                     </p>
                 </div>
-
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 border-t border-indigo-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-indigo-400 text-sm">
-            <p>&copy; 2025 Resonance. All Rights Reserved. | <span class="text-accent">Resonance MTL, Record, Refine, Release.</span></p>
+    <footer class="bg-black border-t border-[#333]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Résonance. All Rights Reserved. | <span class="text-accent">Record, Refine, Release.</span></p>
             <div class="mt-4 flex justify-center space-x-6">
                 <a href="https://www.instagram.com/studio_resonance_mtl/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                 <a href="https://www.facebook.com/resonancemtl" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="facebook" class="w-5 h-5"></i></a>
@@ -95,7 +98,7 @@
         </div>
     </footer>
 
-</div> <!-- WRAPPER CLOSED -->
+</div> 
 
 <script src="script.js"></script>
 </body>

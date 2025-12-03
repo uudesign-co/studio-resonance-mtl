@@ -6,7 +6,7 @@
     <title>Resonance | Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-gray-50 antialiased">
@@ -14,11 +14,16 @@
 <div class="relative">
     <header class="absolute top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center text-2xl font-extrabold tracking-widest uppercase">
-                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20"> 
+            <a href="index.html" class="flex items-center group">
+                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20 mr-3"> 
+                <div class="flex flex-col font-display uppercase leading-none">
+                    <span class="text-xs text-gray-300 tracking-[0.2em] self-start">Studio</span>
+                    <span class="text-2xl font-extrabold text-white tracking-widest my-1">Résonance</span>
+                    <span class="text-xs text-accent tracking-[0.2em] self-end">MTL</span>
+                </div>
             </a>
 
-            <nav class="hidden md:flex space-x-6 font-medium items-center">
+            <nav class="hidden md:flex space-x-6 font-medium items-center text-white">
                 <a href="index.html#services" class="hover:text-accent transition duration-200">Services</a>
                 <a href="gallery.html" class="hover:text-accent transition duration-200">Gallery</a>
                 <a href="gear.html" class="hover:text-accent transition duration-200">Gear</a>
@@ -29,18 +34,18 @@
                 </a>
             </nav>
             
-            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200 text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i data-lucide="menu" class="w-6 h-6 text-white"></i>
             </button>
         </div>
         
         <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-gray-900">
-                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Services</a>
-                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Gallery</a>
-                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Gear</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">About</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-accent bg-gray-800">Contact</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-black">
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Gallery</a>
+                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Gear</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-accent bg-gray-900">Contact</a>
                 <a href="contact.html?service=General+Inquiry" class="w-full inline-block bg-accent text-gray-900 px-4 py-2 my-2 rounded-lg font-semibold hover:bg-pink-300 transition duration-300">
                     Book Now
                 </a>
@@ -49,19 +54,21 @@
     </header>
 
     <main>
-        <section id="contact-hero" class="relative overflow-hidden bg-indigo-950 contact-hero-bg">
-            <div class="absolute inset-0 bg-gray-900/70 z-0"></div>
+        <!-- Removed bg-indigo-950 -->
+        <section id="contact-hero" class="relative overflow-hidden contact-hero-bg">
+            <div class="absolute inset-0 bg-black/60 z-0"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-48 pb-20 md:pt-56 md:pb-32">
                 <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4">
                     <span class="block text-white">GET IN TOUCH</span>
                 </h1>
-                <p class="text-2xl text-accent max-w-3xl mx-auto">
+                <p class="text-2xl text-accent max-w-3xl mx-auto text-shadow-neon">
                     Let's create something incredible.
                 </p>
             </div>
         </section>
 
-        <section id="contact-content" class="py-20 bg-gray-900">
+        <!-- Removed bg-gray-900 -->
+        <section id="contact-content" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <div>
@@ -69,15 +76,16 @@
                         <form action="https://formspree.io/f/mjkjkbnz" method="POST" class="space-y-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                                <input type="text" id="name" name="Name" class="w-full px-4 py-3 bg-indigo-900 border border-indigo-700 rounded-lg text-white focus:ring-accent focus:border-accent" required>
+                                <!-- Updated input bg to #0a0a0a to match cards -->
+                                <input type="text" id="name" name="Name" class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-white focus:ring-accent focus:border-accent" required>
                             </div>
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                                <input type="email" id="email" name="Email" class="w-full px-4 py-3 bg-indigo-900 border border-indigo-700 rounded-lg text-white focus:ring-accent focus:border-accent" required>
+                                <input type="email" id="email" name="Email" class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-white focus:ring-accent focus:border-accent" required>
                             </div>
                             <div>
                                 <label for="service_type" class="block text-sm font-medium text-gray-300 mb-2">Interested Service</label>
-                                <select id="service_type" name="Service" class="w-full px-4 py-3 bg-indigo-900 border border-indigo-700 rounded-lg text-white focus:ring-accent focus:border-accent">
+                                <select id="service_type" name="Service" class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-white focus:ring-accent focus:border-accent">
                                     <option value="General Inquiry">General Inquiry</option>
                                     <option value="Studio Recording">Studio Recording</option>
                                     <option value="Audio Lessons / Academy">Audio Lessons / Academy</option>
@@ -87,9 +95,9 @@
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                                <textarea id="message" name="Message" rows="4" class="w-full px-4 py-3 bg-indigo-900 border border-indigo-700 rounded-lg text-white focus:ring-accent focus:border-accent" required></textarea>
+                                <textarea id="message" name="Message" rows="4" class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#333] rounded-lg text-white focus:ring-accent focus:border-accent" required></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-accent text-gray-900 px-4 py-3 rounded-xl font-bold hover:bg-pink-300 transition duration-300">
+                            <button type="submit" class="w-full bg-accent text-gray-900 px-4 py-3 rounded-xl font-bold hover:bg-pink-300 transition duration-300 box-shadow-neon">
                                 Send Message
                             </button>
                         </form>
@@ -97,18 +105,18 @@
 
                     <div>
                         <h2 class="text-3xl font-bold text-left mb-10 text-white">Our Location</h2>
-                        <div class="rounded-xl overflow-hidden border-2 border-indigo-700">
+                        <div class="rounded-xl overflow-hidden border-2 border-[#333]">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.3137441669237!2d-73.59529390865862!3d45.46332562024548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9109379bb88f9%3A0x2a5682002f94f043!2s5524%20Saint-Patrick%20St.%20suite%20305%2C%20Montreal%2C%2C%20QC%20H4E%201A8!5e0!3m2!1sen!2sca!4v1762114027006!5m2!1sen!2sca" 
                             class="w-full h-96 border-0" 
                             allowfullscreen="" 
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
-                        <div class="mt-6 text-indigo-200">
+                        <div class="mt-6 text-gray-300">
                             <h3 class="text-xl font-semibold text-white">Resonance MTL</h3>
                             <p class="mt-2">5524 Saint-Patrick St. Suite 305</p>
                             <p>Montreal, QC, H4E 1A8</p>
-                            <p class="mt-4 text-accent font-semibold">(514)-726-7908</p>
+                            <p class="mt-4 text-accent font-semibold">enter phone number</p>
                         </div>
                     </div>
                 </div>
@@ -116,9 +124,9 @@
         </section>
     </main>
 
-    <footer class="bg-gray-900 border-t border-indigo-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-indigo-400 text-sm">
-            <p>&copy; 2025 Resonance. All Rights Reserved. | <span class="text-accent">Resonance MTL, Record, Refine, Release.</span></p>
+    <footer class="bg-black border-t border-[#333]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Résonance. All Rights Reserved. | <span class="text-accent">Record, Refine, Release.</span></p>
             <div class="mt-4 flex justify-center space-x-6">
                 <a href="https://www.instagram.com/studio_resonance_mtl/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                 <a href="https://www.facebook.com/resonancemtl" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="facebook" class="w-5 h-5"></i></a>
@@ -127,7 +135,7 @@
         </div>
     </footer>
 
-</div> <!-- WRAPPER CLOSED -->
+</div> 
 
 <script src="script.js"></script>
 </body>

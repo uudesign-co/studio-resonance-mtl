@@ -6,7 +6,7 @@
     <title>Resonance | Our Arsenal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-gray-50 antialiased">
@@ -14,11 +14,16 @@
 <div class="relative">
     <header class="absolute top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center text-2xl font-extrabold tracking-widest uppercase">
-                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20"> 
+            <a href="index.html" class="flex items-center group">
+                <img src="images/logo.svg" alt="Resonance Logo" class="h-20 w-20 mr-3"> 
+                <div class="flex flex-col font-display uppercase leading-none">
+                    <span class="text-xs text-gray-300 tracking-[0.2em] self-start">Studio</span>
+                    <span class="text-2xl font-extrabold text-white tracking-widest my-1">Résonance</span>
+                    <span class="text-xs text-accent tracking-[0.2em] self-end">MTL</span>
+                </div>
             </a>
 
-            <nav class="hidden md:flex space-x-6 font-medium items-center">
+            <nav class="hidden md:flex space-x-6 font-medium items-center text-white">
                 <a href="index.html#services" class="hover:text-accent transition duration-200">Services</a>
                 <a href="gallery.html" class="hover:text-accent transition duration-200">Gallery</a>
                 <a href="gear.html" class="text-accent font-bold transition duration-200">Gear</a>
@@ -29,18 +34,18 @@
                 </a>
             </nav>
             
-            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-800 transition duration-200 text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i data-lucide="menu" class="w-6 h-6 text-white"></i>
             </button>
         </div>
         
         <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-gray-900">
-                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Services</a>
-                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Gallery</a>
-                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium text-accent bg-gray-800">Gear</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">About</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent">Contact</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-black">
+                <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Gallery</a>
+                <a href="gear.html" class="block px-3 py-2 rounded-md text-base font-medium text-accent bg-gray-900">Gear</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 hover:text-accent text-white">Contact</a>
                 <a href="contact.html?service=General+Inquiry" class="w-full inline-block bg-accent text-gray-900 px-4 py-2 my-2 rounded-lg font-semibold hover:bg-pink-300 transition duration-300">
                     Book Now
                 </a>
@@ -49,8 +54,8 @@
     </header>
 
     <main>
-        <section id="gear-hero" class="relative overflow-hidden bg-indigo-950 gear-hero-bg">
-            <div class="absolute inset-0 bg-gray-900/70 z-0"></div>
+        <section id="gear-hero" class="relative overflow-hidden gear-hero-bg">
+            <div class="absolute inset-0 bg-black/70 z-0"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-48 pb-20 md:pt-56 md:pb-32">
                 <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-4">
                     <span class="block text-white">OUR ARSENAL</span>
@@ -61,183 +66,179 @@
             </div>
         </section>
 
-        <section id="gear" class="py-20 bg-gray-900">
+        <!-- Main Section: Removed bg-gray-900 to show grid -->
+        <section id="gear" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-16 text-white">The Full Gear List</h2>
-                <!-- 
-                    HYBRID GRID LAYOUT (4x4 Categorized Columns on Desktop)
-                    The order is: Col 1 Item 1, Col 2 Item 1, Col 3 Item 1, Col 4 Item 1...
-                -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
                     
-                    <!-- 1. Guitars (Col 1) -->
+                    <!-- 1. Guitars -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="guitar" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Guitars</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="guitar" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Guitars</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>SQUIRE JAZZ BASS Indonesia</li><li>SQUIRE STRATOCASTER MIJ</li><li>FENDER TELECASTER MIM</li><li>IBANEZ ELECTRO-ACOUSTIC</li><li>YAMAHA CLASSICAL</li><li>MÉRIDA Extrema</li><li>FENDER USA P-BASS</li></ul>
                         </div>
                     </div>
 
-                    <!-- 2. Vintage Keys (Col 2) -->
+                    <!-- 2. Vintage Keys -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="piano" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Vintage Keys</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="piano" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Vintage Keys</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>Hohner Clavinet D6</li><li>Hohner Clavinet/PIanet Duo</li><li>Fender Rhodes MK1</li><li>Wurlitzer 200A</li><li>Hammond M3 w/ Leslie 145</li><li>Clavia Nord Electro 73</li></ul>
                         </div>
                     </div>
 
-                    <!-- 3. Microphones (Col 3) -->
+                    <!-- 3. Microphones -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="mic" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Microphones</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="mic" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Microphones</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>AKG C414 XLii x2</li><li>WARM 87 x2</li><li>TELEFUNKEN AK47</li><li>MD 421 x 2</li><li>AT 4050</li><li>AT 4033a</li><li>AT 2020 x4</li><li>AT 2021 x2</li><li>AKG D112</li><li>AKG D125 x2</li><li>Sennheiser E 609</li><li>BETA 52a</li><li>SHURE SM57 x3</li><li>SHURE SM58 x 2</li><li>SHURE SM7b x 2</li><li>MXL 603s x2</li><li>Shure 315 Ribbon</li></ul>
                         </div>
                     </div>
 
-                    <!-- 4. Audio Interface (Col 4) -->
+                    <!-- 4. Audio Interface -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="hard-drive" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Audio Interface</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="hard-drive" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Audio Interface</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>RME UFX</li><li>RME Fireface 800</li><li>RME Babyface</li><li>Apogee PSX 100 AD/DA converters</li></ul>
                         </div>
                     </div>
 
-                    <!-- 5. Amplifiers (Col 1) -->
+                    <!-- 5. Amplifiers -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="speaker" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Amplifiers</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="speaker" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Amplifiers</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>Traynor YCV 40</li><li>Traynor TS-50 x 2</li><li>Fender Twin Silverface 1976</li><li>Marshall JMP 50w w/ 1960A cab 4x12”</li><li>Roland Jazz chorus JC-80 1976</li><li>Roland Jazz chorus JC-60 1978</li><li>Ibanez GX-60B bass amp 1x12”</li><li>Leslie 145 1967</li><li>Blackheart BH-5 amp & cab</li><li>Daneletro Dirty Thirty x 2</li></ul>
                         </div>
                     </div>
 
-                    <!-- 6. Synths (Col 2) -->
+                    <!-- 6. Synths -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="keyboard" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Synths</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="keyboard" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Synths</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>ENSONIQ SQ-80</li><li>KORG DW-8000</li><li>KORG Mono/poly</li><li>KORG PolySix</li><li>KORG MAXI-KORG</li><li>KORG Poly 61</li><li>Korg ARP ODYSSEY</li><li>KORG MS-20</li><li>KORG M1</li><li>ROLAND JX-3P</li><li>ROLAND JUNO-60</li><li>ROLAND SH-101</li><li>ROLAND SH-1000</li><li>ROLAND D-50</li><li>YAMAHA E-70 - Son of GX modded</li><li>YAMAHA SY-77</li><li>YAMAHA DX-7</li><li>BEHRINGER Vocoder VC30</li><li>KAWAII K4</li><li>MOOG SUB PHATTY</li></ul>
                         </div>
                     </div>
 
-                    <!-- 7. Mic Pres (Col 3) -->
+                    <!-- 7. Pedals -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="audio-lines" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Mic Pres</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>API 3124+</li><li>WARM WA73-EQ x2</li><li>Focusrite ISA-ONE x 3</li><li>Focusrite Octopre MK2</li><li>Metric Halo 2882</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 8. Monitoring (Col 4) -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="monitor-speaker" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Monitoring</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>Dynaudio BM15A</li><li>Dynaudio BX30 Subwoofer</li><li>KRK VXT 6</li><li>KRK 10S Sub</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 9. Drums (Col 1) -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="drum" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Drums</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>GRETSCH CATALINA CLASSIC Kick 18”</li><li>GRETSCH CATALINA CLASSIC Low Tom</li><li>GRETSCH CATALINA CLASSIC High Tom</li><li>GRETSCH CATALINA CLASSIC Snare 14”</li><li>TEMPO 1960’s Snare 14”</li><li>SONOR SIGNATURE SNARE 60/100 L&M exclusive</li><li>DREAM Contact Ride 22”</li><li>DREAM Contact Crash/Ride 20”</li><li>DREAM Contact Hi-Hat 14”</li><li>DREAM BLISS Ride 20”</li><li>DREAM BLISS Crash 16”</li><li>DREAM BLISS Hi-Hat 12”</li><li>SABIAN SR2 Heavy Ride 22”</li><li>SABIAN SR2 Light Crash/Ride 20”</li><li>SABIAN SR2 Medium/Heavy HH 14”</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 10. Drum Machines (Col 2) -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="cpu" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Drum Machines</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>ROLAND CR-8000</li><li>ROLAND TR8s</li><li>MXR 185</li><li>KORG Rhythm 55</li><li>KORG KPR-77</li><li>KORG DDD-1</li><li>MPC 2000</li><li>OBERHEIM DX</li><li>ROLAND PB-300</li><li>BOSS DR-55</li><li>BOSS DR-110</li><li>ROLAND R8-M</li><li>PEARL DRX-1</li><li>BEHRINGER Syncussion SY-1</li><li>TAMA Techstar TS-305</li><li>ALESIS DM PRO</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 11. Dynamic Processors (Col 3) -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="sliders-horizontal" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Dynamic Processors</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>KLARKTEKNIK 76-KT Limiter x2</li><li>KLARKTEKNIK EQP-KT x2</li><li>KLARKTEKNIK 2A-KT x 2</li><li>UREI 1176 rev G</li><li>ALESIS 3630 Compressor</li><li>WARM Bus Compressor</li><li>DBX 162 Stereo Compressor</li><li>Dolby 361 Vocal Enhancer x 2</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 12. Headphones (Col 4) -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="headphones" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Headphones</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
-                        </div>
-                        <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>Furman HDS-6 Headphone Distribution system + HR6 remote headphone stations x 6</li><li>Audio Technica ATH M-50 Closed Back Headphones x 8</li></ul>
-                        </div>
-                    </div>
-
-                    <!-- 13. Pedals (Col 1) -->
-                    <div class="gear-item">
-                        <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="waves" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Pedals</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="waves" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Pedals</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>EHX ENGLISH MUFF’N TUBE overdrive</li><li>EHX Big Muff Nano Fuzz</li><li>EHX Canyon Delay</li><li>MXR Carbon Copy analog delay</li><li>MXR Flanger</li><li>MXR Custom Comp</li><li>MXR Stereo Tremolo</li><li>MXR Analog Chorus</li><li>STRYMON Flint tremolo and reverb</li><li>STRYMON Timeline</li><li>STRYMON Big Sky</li><li>LINE 6 DL4 Delay</li><li>ZVEX EFFECTS Fuzz Factory</li><li>BOSS CE-1 Chorus</li><li>BOSS Chorus CE-3</li><li>BOSS Octave OC-2</li><li>BOSS Blues Driver BD-2</li><li>BOSS OD-1 Overdrive</li><li>BOSS OD-3 Overdrive</li><li>BOSS SD-1 Super Overdrive</li><li>BOSS DS-1 DIstortion</li><li>BOSS BF-2 Flanger</li><li>BOSS DC-2 Dimension C</li><li>BOSS LS-2 Line Selector</li><li>BOSS PQ-3B parametric EQ</li><li>BOSS GE-7 Equalizer</li><li>BOSS GE-10 Equalizer x 2</li><li>BOSS GE-6 Equalizer</li><li>BOSS PH-1r phaser</li><li>BOSS DSD-2 digital delay/sampler</li><li>BOSS HF-2 HI band Flanger</li><li>BOSS KV-200</li><li>BOSS NF-1 Noise Gate</li><li>BOSS FS-6</li><li>BOSS RC-20Xl Looper</li><li>BOSS DD-6 Digital Delay</li><li>BOSS MT-2 Metal Zone</li><li>BOSS HM-2 Heavy Metal</li><li>BOSS TW-1 Touch Wah</li><li>BOSS CS-1 Compressor/sustainer</li><li>BOSS CS-2 Compressor/Sustainer</li><li>EHX EPITOME</li><li>DUNLOP CRYBABY WAH GCB-95</li><li>IBANEZ TS-9</li><li>IBANEZ CS-9</li><li>IBANEZ AF-9</li><li>FULLTONE DEJA VIBE 2</li><li>MARSHALL VT-1 Vibratrem</li><li>ERNIEBALL Volume Pedal</li><li>BEHRINGER SF300 FUZZ</li><li>TC ELECTRONICS TALESPIN</li><li>TC ELECTRONICS RUSTY FUZZ</li><li>TC ELECTRONICS ECHOBRAIN</li></ul>
                         </div>
                     </div>
 
-                    <!-- 14. Control Surface (Col 2) -->
+                    <!-- 8. Mic Pres -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="layout-grid" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Control Surface</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="audio-lines" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Mic Pres</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>API 3124+</li><li>WARM WA73-EQ x2</li><li>Focusrite ISA-ONE x 3</li><li>Focusrite Octopre MK2</li><li>Metric Halo 2882</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 9. Drums -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="drum" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Drums</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>GRETSCH CATALINA CLASSIC Kick 18”</li><li>GRETSCH CATALINA CLASSIC Low Tom</li><li>GRETSCH CATALINA CLASSIC High Tom</li><li>GRETSCH CATALINA CLASSIC Snare 14”</li><li>TEMPO 1960’s Snare 14”</li><li>SONOR SIGNATURE SNARE 60/100 L&M exclusive</li><li>DREAM Contact Ride 22”</li><li>DREAM Contact Crash/Ride 20”</li><li>DREAM Contact Hi-Hat 14”</li><li>DREAM BLISS Ride 20”</li><li>DREAM BLISS Crash 16”</li><li>DREAM BLISS Hi-Hat 12”</li><li>SABIAN SR2 Heavy Ride 22”</li><li>SABIAN SR2 Light Crash/Ride 20”</li><li>SABIAN SR2 Medium/Heavy HH 14”</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 10. Drum Machines -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="cpu" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Drum Machines</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>ROLAND CR-8000</li><li>ROLAND TR8s</li><li>MXR 185</li><li>KORG Rhythm 55</li><li>KORG KPR-77</li><li>KORG DDD-1</li><li>MPC 2000</li><li>OBERHEIM DX</li><li>ROLAND PB-300</li><li>BOSS DR-55</li><li>BOSS DR-110</li><li>ROLAND R8-M</li><li>PEARL DRX-1</li><li>BEHRINGER Syncussion SY-1</li><li>TAMA Techstar TS-305</li><li>ALESIS DM PRO</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 11. Dynamic Processors -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="sliders-horizontal" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Dynamic Processors</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>KLARKTEKNIK 76-KT Limiter x2</li><li>KLARKTEKNIK EQP-KT x2</li><li>KLARKTEKNIK 2A-KT x 2</li><li>UREI 1176 rev G</li><li>ALESIS 3630 Compressor</li><li>WARM Bus Compressor</li><li>DBX 162 Stereo Compressor</li><li>Dolby 361 Vocal Enhancer x 2</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 12. Headphones -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="headphones" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Headphones</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>Furman HDS-6 Headphone Distribution system + HR6 remote headphone stations x 6</li><li>Audio Technica ATH M-50 Closed Back Headphones x 8</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 13. Rack FX -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="server" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Rack FX</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
+                        </div>
+                        <div class="gear-content hidden">
+                            <ul class="space-y-1"><li>IBANEZ HD1000</li><li>IBANEZ UE400 & UE 405 MultiFX</li><li>KORG SDD-2000 BBD delay</li><li>KORG SDD-3300 Triple Delay</li><li>INTERSOUND IVP</li><li>ROLAND SIP-300</li><li>KLARKTEKNIK BBD-320 DImension Chorus</li><li>LEXICON LXP-15</li><li>Yamaha SPX-90 x 2</li><li>Roland RE-201 Space Echo</li><li>Univox EC-10 Tape Echo x 2</li><li>Dynacord Echocord Super 75 Tape Echo</li><li>BOSS DM-100 BBD Delay</li><li>BOSS RX-100 Reverb</li></ul>
+                        </div>
+                    </div>
+
+                    <!-- 14. Control Surface -->
+                    <div class="gear-item">
+                        <div class="gear-toggle">
+                            <div class="flex items-center space-x-3"><i data-lucide="layout-grid" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Control Surface</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>Mackie MC UNIVERSAL PRO Control Surface</li><li>MOTU Midi Timepiece - midi patchbay</li><li>Ableton Push 2</li><li>RME ARC Controller</li></ul>
                         </div>
                     </div>
 
-                    <!-- 15. Rack FX (Col 3) -->
+                    <!-- 15. Monitoring -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="server" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Rack FX</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="monitor-speaker" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Monitoring</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
-                            <ul class="space-y-1"><li>IBANEZ HD1000</li><li>IBANEZ UE400 & UE 405 MultiFX</li><li>KORG SDD-2000 BBD delay</li><li>KORG SDD-3300 Triple Delay</li><li>INTERSOUND IVP</li><li>ROLAND SIP-300</li><li>KLARKTEKNIK BBD-320 DImension Chorus</li><li>LEXICON LXP-15</li><li>Yamaha SPX-90 x 2</li><li>Roland RE-201 Space Echo</li><li>Univox EC-10 Tape Echo x 2</li><li>Dynacord Echocord Super 75 Tape Echo</li><li>BOSS DM-100 BBD Delay</li><li>BOSS RX-100 Reverb</li></ul>
+                            <ul class="space-y-1"><li>Dynaudio BM15A</li><li>Dynaudio BX30 Subwoofer</li><li>KRK VXT 6</li><li>KRK 10S Sub</li></ul>
                         </div>
                     </div>
-                    
-                    <!-- 16. Softwares & DAWs (Col 4) -->
+
+                    <!-- 16. Softwares & DAWs -->
                     <div class="gear-item">
                         <div class="gear-toggle">
-                            <div class="flex items-center space-x-3"><i data-lucide="save" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Softwares & DAWs</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 toggle-icon"></i>
+                            <div class="flex items-center space-x-3"><i data-lucide="save" class="w-6 h-6 text-accent"></i><h3 class="text-xl font-semibold text-white">Softwares & DAWs</h3></div><i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 toggle-icon"></i>
                         </div>
                         <div class="gear-content hidden">
                             <ul class="space-y-1"><li>Pro Tools Studio</li><li>Ableton Live 11 Suite</li><li>Logic Pro X</li><li>FL Studio</li><li>Reaper</li></ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 border-t border-indigo-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-indigo-400 text-sm">
-            <p>&copy; 2025 Resonance. All Rights Reserved. | <span class="text-accent">Resonance MTL, Record, Refine, Release.</span></p>
+    <footer class="bg-black border-t border-[#333]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Résonance. All Rights Reserved. | <span class="text-accent">Record, Refine, Release.</span></p>
             <div class="mt-4 flex justify-center space-x-6">
                 <a href="https://www.instagram.com/studio_resonance_mtl/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                 <a href="https://www.facebook.com/resonancemtl" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition duration-200"><i data-lucide="facebook" class="w-5 h-5"></i></a>
@@ -245,8 +246,7 @@
             </div>
         </div>
     </footer>
-
-</div> <!-- WRAPPER CLOSED -->
+</div>
 
 <script src="script.js"></script>
 </body>
